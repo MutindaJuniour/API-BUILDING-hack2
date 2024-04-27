@@ -1,0 +1,79 @@
+{% load static%}
+<!DOCTYPE html>
+  <html lang="en">
+      <head>
+        <title>API Homepage</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'styles.css' %}" />
+        
+        <style>
+
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+
+
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+          }
+
+          .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+          }
+
+          .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+          }
+
+          h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 1.5;
+          }
+
+          img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-top: 10px;
+          }
+
+        </style>
+      </head>
+    <body>
+      <div class="container">
+      <div class="card random-fact">
+        <h1>Welcome to the world of Random Facts!</h1>
+          <p>{{fact}}</p>
+        </div>
+      
+      <div class="card random-image">
+        <h1>Hey!Wanna check out some Random Dog Images??</h1>
+            <img src="{{ dog }}" alt="Random Dog Image">
+      </div>
+  
+      <div class="card random-student">
+        <h1>Random Student Courses.</h1>
+          {{courses}}
+            <p>{{name}}</p>
+            <button onclick="window.location.reload();">Refresh</button>
+      </div>
+        
+    </body>
+  </html>
